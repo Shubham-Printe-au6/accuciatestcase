@@ -27,10 +27,10 @@ const userSchema = new Schema({
         type: String,
         trim: true
     },
-    photo: {
-        type: String,
-        trim: true
-    },
+    // photo: {
+    //     type: String,
+    //     trim: true
+    // },
     address: {
         type: String,
         trim: true

@@ -8,6 +8,13 @@ router.route('/').get((req, res) => {
         .catch(err => res.status(400).json(`Error: ${err}`));
 });
 
+// get one user by ID
+router.route('/:id').get((req, res) => {
+    User.findById(req.params.id)
+        .then(user => res.json(user))
+        .catch(err => res.status(400).json(`Error: ${err}`));
+});
+
 // add a new user
 router.route('/add').post((req, res) => {
     const newUser = new User(req.body);
@@ -38,7 +45,7 @@ router.route('/edit/:id').put((req, res) => {
             user.phone = req.body.phone;
             user.age = req.body.age;
             user.gender = req.body.gender;
-            user.photo = req.body.photo;
+            // user.photo = req.body.photo;
             user.address = req.body.address;
 
             user.save()
