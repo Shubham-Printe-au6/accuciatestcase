@@ -1,5 +1,10 @@
 # Getting Started with Create React App
 
+dotenv : {
+  ATLAS_URI=mongodb+srv://newUser:somePW@crudoperations.ah0xq.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+  PORT=5000
+}
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
